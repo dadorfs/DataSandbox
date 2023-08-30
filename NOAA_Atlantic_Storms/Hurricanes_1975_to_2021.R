@@ -168,7 +168,7 @@ storm.animation <- function(storm_name, storm_year) {
         linewidth = wind
       ),
       lineend = "round") +
-      labs(title = glue("{max_status} {storm_name}, {storm_year}"),
+      labs(title = glue("{max_status} {storm_name}"),
            subtitle = "{frame_along}") +
       scale_color_gradient(low = "gold", high = "red") +
       scale_linewidth_continuous(name = "Windspeed (mph)", range = c(1, 4)) +
@@ -189,7 +189,7 @@ andrew92 <- storm.animation(storm_name = "Andrew", storm_year = 1992)
 andrew_gif <- animate(andrew92, width = 6, height = 5, units = "in", res = 200)
 
 # Save
-anim_save("hurricane_andrew_1992.gif", andrew_gif)
+# anim_save("hurricane_andrew_1992.gif", andrew_gif)
 
 
 
